@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Packages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= Package.human_attribute_name :name %></th>
+      <th><%= Package.human_attribute_name :version %></th>
+      <th><%= Package.human_attribute_name :published_at %></th>
+      <th><%= Package.human_attribute_name :title %></th>
+      <th><%= Package.human_attribute_name :description %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @packages.each do |package| %>
+      <tr>
+        <td><%= package.name %></td>
+        <td><%= package.version %></td>
+        <td><%= package.published_at %></td>
+        <td><%= package.title %></td>
+        <td><%= package.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
