@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_14_001314) do
+ActiveRecord::Schema.define(version: 2019_05_15_052236) do
 
   create_table "packages", force: :cascade do |t|
     t.string "name", null: false
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2019_05_14_001314) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "authors"
+    t.string "maintainers"
     t.index ["name", "version"], name: "index_packages_on_name_and_version", unique: true
   end
 
