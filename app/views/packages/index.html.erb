@@ -10,6 +10,8 @@
       <th><%= Package.human_attribute_name :published_at %></th>
       <th><%= Package.human_attribute_name :title %></th>
       <th><%= Package.human_attribute_name :description %></th>
+      <th><%= Package.human_attribute_name :authors %></th>
+      <th><%= Package.human_attribute_name :maintainers %></th>
     </tr>
   </thead>
 
@@ -21,6 +23,8 @@
         <td><%= package.published_at %></td>
         <td><%= package.title %></td>
         <td><%= package.description %></td>
+        <td><%= package.authors %></td>
+        <td><%= package.maintainers %></td>
       </tr>
     <% end %>
   </tbody>
