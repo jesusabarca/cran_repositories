@@ -38,6 +38,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Async jobs
 gem 'sidekiq'
+# Cron like scheduler for sidekiq jobs
+gem 'sidekiq-scheduler'
+
+# Debian config file parser
+gem 'treetop-dcf'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

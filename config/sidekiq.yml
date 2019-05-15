@@ -1,0 +1,4 @@
+:schedule:
+  repository_reader_worker:
+    cron: '0 12 * * * *'
+    class: RepositoryReaderWorker
