@@ -6,9 +6,10 @@ class RepositoryReaderWorker
 
   include Sidekiq::Worker
 
+  # TODO: refactor into a service object
   def perform
     response = Net::HTTP.get_response(Package.repo_uri)
-    raise response.message unless response.is_a?(Net::HTTPSucess)
+    raise response.message unless response.code == '200'
 
     packages = response.body.lines('', chomp: true).first(NO_OF_PACKAGES)
     packages.each do |package|
